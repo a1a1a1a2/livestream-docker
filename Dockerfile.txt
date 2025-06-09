@@ -1,0 +1,13 @@
+FROM python:3.11-slim
+
+# Cài ffmpeg
+RUN apt-get update && apt-get install -y ffmpeg
+
+# Copy code
+WORKDIR /app
+COPY . /app
+
+# Cài thư viện
+RUN pip install --no-cache-dir -r requirements.txt
+
+CMD ["python", "main.py"]
