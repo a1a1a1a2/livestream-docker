@@ -1,7 +1,6 @@
 services:
   - type: web
-    name: livestream-bot
+    name: livestream
     env: docker
-    dockerfilePath: Dockerfile
     plan: free
-    region: singapore
+    autoDeploy: true
